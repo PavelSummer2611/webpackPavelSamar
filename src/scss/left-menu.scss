@@ -3,14 +3,17 @@
   padding: 0;
   background-color: #f8f8f8;
 }
-.wrapper {
+.burger-menu{
+  
+  &__wrapper {
   width: 320px;
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
     -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
   padding-left: 24px;
   padding-right: 24px;
 }
-.header {
+
+&__header {
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
@@ -18,15 +21,16 @@
   justify-content: space-between;
   align-items: center;
 }
-.header-left {
+&__header-left {
   display: flex;
   justify-content: start;
   align-items: center;
 }
-.header-right {
+&__header-right {
   display: flex;
   justify-content: end;
   align-items: center;
+}
 }
 .button {
   border-style: none;
@@ -38,14 +42,14 @@
   transition-duration: 0.7s;
 }
 .burger-close__button {
-  background-image: url("img/ic_burger_close.svg");
+  background-image: url("../img/ic_burger_close.svg");
   margin-right: 17px;
 }
 .logo {
   align-items: center;
 }
 .search__button {
-  background-image: url("img/ic_search.svg");
+  background-image: url("../img/ic_search.svg");
 }
 
 .menu__button {
@@ -64,13 +68,13 @@
   text-align: left;
 }
 .call__button {
-  background-image: url("img/ic_call.svg");
+  background-image: url("../img/ic_call.svg");
 }
 .chat__button {
-  background-image: url("img/ic_chat.svg");
+  background-image: url("../img/ic_chat.svg");
 }
 .profile__button {
-  background-image: url("img/ic_profile.svg");
+  background-image: url("../img/ic_profile.svg");
 }
 .menu__link:hover {
   color: rgb(126, 126, 130);

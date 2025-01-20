@@ -22,7 +22,7 @@
   background-color: white;
 }
 .header::before {
-  content: "";
+  content: '';
   background: rgb(234, 234, 234);
   left: 59vw;
   top: 28px;
@@ -34,7 +34,7 @@
   border-radius: 15%;
 }
 .header::after {
-  content: "";
+  content: '';
   background: #d9fff5;
   left: 0;
   right: 0;
@@ -61,34 +61,34 @@
   background-color: white;
 }
 .burger__button {
-  background-image: url("img/ic_burger.svg");
+  background-image: url('../img/ic_burger.svg');
   margin-left: 3vw;
 }
 .logo {
   margin-left: 3vw;
 }
 .call__button {
-  background-image: url("img/ic_call.svg");
+  background-image: url('../img/ic_call.svg');
   display: none;
   margin-right: 2vw;
 }
 .chat__button {
-  background-image: url("img/ic_chat.svg");
+  background-image: url('../img/ic_chat.svg');
   display: none;
   margin-right: 2vw;
 }
 .profile__button {
-  background-image: url("img/ic_profile.svg");
+  background-image: url('../img/ic_profile.svg');
   display: none;
   margin-right: 5vw;
 }
 .repair__button {
-  background-image: url("img/ic_repair.svg");
+  background-image: url('../img/ic_repair.svg');
   margin-right: 2vw;
   position: relative;
 }
 .checkstatus__button {
-  background-image: url("img/ic_checkstatus.svg");
+  background-image: url('../img/ic_checkstatus.svg');
   margin-right: 3vw;
 }
 .main {
@@ -105,7 +105,7 @@
 }
 .main-header__h1 {
   color: rgb(27, 28, 33);
-  font-family: "TT Lakes Bold";
+  font-family: 'TT Lakes Bold';
   font-size: 2em;
   font-weight: bold;
   font-style: normal;
@@ -115,7 +115,7 @@
   width: 100%;
 }
 .main-header__h1::before {
-  content: url("img/highlight.svg");
+  content: url('../img/highlight.svg');
   position: absolute;
   left: 0;
 }
@@ -150,7 +150,7 @@ label {
 .slide-menu__button > a {
   padding: 5px;
   color: rgb(126, 126, 130);
-  font-family: "TT Lakes Medium";
+  font-family: 'TT Lakes Medium';
   font-weight: 500;
   font-size: 1rem;
   text-decoration: none;
@@ -173,7 +173,7 @@ label {
 }
 .content__text {
   color: rgb(27, 28, 33);
-  font-family: "TT Lakes Rgular";
+  font-family: 'TT Lakes Rgular';
   font-size: 1rem;
   font-weight: 400;
   line-height: 20px;
@@ -187,7 +187,7 @@ label {
   justify-content: flex-start;
 }
 .content-text__text {
-  font-family: "TT Lakes Regular";
+  font-family: 'TT Lakes Regular';
   max-width: 100%;
   padding: 0 3.2vw 1.7vw 3vw;
   font-size: 0.88rem;
@@ -203,7 +203,7 @@ label {
 }
 .main-header__label {
   min-width: 140px;
-  font-family: "TT Lakes Medium";
+  font-family: 'TT Lakes Medium';
   color: #1b1c21;
   font-weight: 500;
   font-size: 1rem;
@@ -213,26 +213,28 @@ label {
   padding-bottom: 12px;
 }
 .main-header__repair-button {
-  background-image: url("img\ic_repair.svg");
+  background-image: url('../img/ic_repair.svg');
+  background-repeat: no-repeat;
   margin-right: 2vw;
   align-self: flex-end;
   display: none;
 }
 .main-header__checkstatus-button {
-  background-image: url("img\ic_checkstatus.svg");
+  background-image: url('../img/ic_checkstatus.svg');
+  background-repeat: no-repeat;
   margin-right: 2vw;
   align-self: flex-end;
   display: none;
 }
 .expand__button::before {
-  content: url("img/ic_expand.svg");
+  content: url('../img/ic_expand.svg');
   position: absolute;
   left: 4vw;
   top: -2px;
 }
 .expand__button {
   position: relative;
-  font-family: "TT Lakes Medium";
+  font-family: 'TT Lakes Medium';
   font-weight: 500;
   padding: 0 0 5vw 8vw;
   font-size: 1rem;
@@ -245,7 +247,7 @@ label {
     left: calc(40px + 6vw);
   }
   .repair__button::before {
-    content: "";
+    content: '';
     background: #eaeaea;
     right: 6.5vw;
     top: 5px;
