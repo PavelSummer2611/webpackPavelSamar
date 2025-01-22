@@ -1,0 +1,19 @@
+.techTypes {
+  margin-bottom: 2vw;
+}
+.techTypes__title {
+  font-family: 'TT Lakes Medium';
+  color: rgb(126, 126, 130);
+  font-size: 16px;
+  letter-spacing: -0.6px;
+  margin: 0;
+  // width: 100%;
+  border-top: 3px solid #d9fff5;
+  padding: 1vw 2vw;
+  background-image: linear-gradient(to right, #f8f8f8, #ffffff);
+}
+.techTypesList {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  column-gap: 32px;
+}

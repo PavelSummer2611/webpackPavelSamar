@@ -1,33 +1,41 @@
-* {
-  margin: 0;
-  padding: 0;
-  background-color: #f8f8f8;
+// * {
+//   margin: 0;
+//   padding: 0;
+//   // background-color: #f8f8f8;
+// }
+// .repair-brand__header {
+//   display: flex;
+//   flex-wrap: nowrap;
+//   width: 100%;
+//   height: 56px;
+//   justify-content: space-between;
+//   align-items: center;
+//   border-top: 3px solid #d9fff5;
+//   background-color: #ffffff;
+// }
+.repairBrand {
+  margin-bottom: 2vw;
 }
-.header {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-  height: 56px;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 3px solid #d9fff5;
-  background-color: #ffffff;
-}
-.repair-h1 {
-  color: rgb(27, 28, 33);
-  font-family: "TT Lakes Medium";
+.repairBrand__title {
+  font-family: 'TT Lakes Medium';
   color: rgb(126, 126, 130);
   font-size: 16px;
   letter-spacing: -0.6px;
-  margin-left: 30px;
-  width: 100%;
-  background-color: inherit;
+  margin: 0;
+  // width: 100%;
+  border-top: 3px solid #d9fff5;
+  padding: 1vw 2vw;
+  background-image: linear-gradient(to right, #f8f8f8, #ffffff);
+}
+.brand-slider {
+  padding: 0 2vw;
 }
 .brand-list {
-  padding: 25px 0 25px 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .brand-list-item {
   background-color: #ffffff;
@@ -49,7 +57,7 @@
   width: 40px;
   height: 40px;
   background-color: inherit;
-  background-image: url("../img/go.svg");
+  background-image: url('../img/go.svg');
   text-align: center;
   margin: 10px;
 }
@@ -58,20 +66,25 @@
   background-color: inherit;
 }
 .expand {
-  margin-top: 20px;
-  margin-left: 40px;
-  display: flex;
-  justify-items: center;
+  // margin-top: 20px;
+  // margin-left: 40px;
+  // display: flex;
+  // justify-items: center;
 }
 .expand_button {
+  background-color: inherit;
+  margin-left: 40px;
+  // display: flex;
+  justify-items: center;
   border-style: none;
-  font-family: "TT Lakes Regular";
-  font-size: 16px;
+  font-family: 'TT Lakes Regular';
+  font-weight: 500;
+  font-size: 14px;
   cursor: grab;
   position: relative;
 }
 .expand_button::before {
-  content: url("../img/ic_expand.svg");
+  content: url('../img/ic_expand.svg');
   top: -2px;
   left: -23px;
   position: absolute;
