@@ -95,7 +95,7 @@
   margin-right: 3vw;
 }
 // .main {
-  
+
 // }
 .main-header {
   // width: 100%;
@@ -123,7 +123,7 @@ label {
 .nav {
   position: relative;
   // width: 100%;
-  padding: 0 2vw 1vw 2vw;
+  padding: 0 2vw 0 2vw;
   overflow: hidden;
 }
 .scroll-wrapper {
@@ -271,7 +271,7 @@ label {
   }
   .nav {
     // width: 100%;
-    padding: 0 2vw 1vw 2vw;
+    padding: 0 2vw 0 2vw;
   }
   .scroll-wrapper {
     overflow-x: auto;
@@ -289,7 +289,7 @@ label {
     object-fit: cover;
     width: 360px;
     height: 208px;
-    margin-right: 3vw;
+    // margin-right: 3vw;
     border-radius: 3%;
   }
   .content__text--computer {
@@ -309,12 +309,12 @@ label {
     object-fit: cover;
     width: 532px;
     height: 307px;
-    padding-right: 1vw;
+    // padding-right: 1vw;
     border-radius: 3%;
   }
   .nav {
     // width: 1096px;
-    padding: 0 2vw 1vw 2vw;
+    padding: 0 2vw 0 2vw;
   }
   .slide-menu {
     display: flex;

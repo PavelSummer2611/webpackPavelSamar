@@ -17,3 +17,31 @@
   grid-template-columns: repeat(4, minmax(240px, 1fr));
   column-gap: 32px;
 }
+.techTypes_swiper {
+  margin: 2vw 0;
+  padding: 0 2vw;
+}
+.techTypesCard {
+  font-family: 'TT Lakes Regular';
+  color: rgb(27, 28, 33);
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  height: 160px;
+  flex-direction: column;
+  font-weight: 500;
+  align-items: flex-start;
+  line-height: 24px;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+.techTypesCard::after {
+  content: '';
+  background: url(../img/go.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+  align-self: flex-end;
+}
