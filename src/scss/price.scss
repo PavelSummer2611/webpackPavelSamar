@@ -1,3 +1,103 @@
-.price__title{
-  
+.price__title {
+  font-family: 'TT Lakes Medium';
+  color: rgb(126, 126, 130);
+  font-size: 16px;
+  letter-spacing: -0.6px;
+  margin: 0;
+  // width: 100%;
+  border-top: 3px solid #d9fff5;
+  padding: 1vw 2vw;
+  background-image: linear-gradient(to right, #f8f8f8, #ffffff);
+}
+.price__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #7e7e82;
+  align-items: center;
+  height: 48px;
+  margin: 0 24px;
+  padding: 0 16px;
+}
+.price__head-col--services {
+  flex-basis: 348px;
+  flex-grow: 1;
+}
+.price__head-col--price {
+  flex-basis: 74px;
+  flex-grow: 1;
+}
+.price__head-col--term {
+  flex-basis: 220px;
+  flex-grow: 1;
+}
+.price__swiper {
+  height: auto;
+  margin: 0 2vw 2vw;
+  padding: 0;
+  background-color: white;
+}
+.price-wrapper {
+  padding: 0 1vw;
+}
+.price__card {
+  font-family: 'TT Lakes', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 0;
+    color: #1b1c21;
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+  align-items: center;
+  width: 100% !important;
+  height: 64px;
+  border: none;
+  border-radius: 0px;
+  background-color: white;
+  padding: 0;
+  border-bottom: 1px solid #eaeaea;
+  box-sizing: content-box;
+  // transition: 0.2s linear;
+}
+.price__card:hover {
+  font-weight: 500;
+}
+.card__item--services {
+  flex-basis: 348px;
+  flex-grow: 1;
+}
+.card__item--price {
+  flex-basis: 74px;
+  flex-grow: 1;
+}
+.card__item--term {
+  flex-basis: 220px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+.card__btn {
+  border-radius: 16px;
+  background-color: #ff3e79;
+  color: #ffffff;
+  line-height: 24px;
+  font-size: 12px;
+  letter-spacing: -0.15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 4px 8px 4px 12px;
+  display: flex;
+  // transition: 0.2s ease-in-out;
+  margin-left: auto;
+}
+.card__btn::after {
+  content: '';
+  background: url(../img/goside.svg);
+  margin-left: 8px;
+  width: 24px;
+  height: 24px;
 }
