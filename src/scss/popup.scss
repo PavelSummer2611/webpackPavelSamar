@@ -1,0 +1,160 @@
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  right: 0;
+
+  &__container {
+    min-width: 320px;
+    width: 100vw;
+    height: 100vh;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: -16px 0 52px rgba(14, 24, 80, 0.2);
+  }
+
+  &__icon {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 24px;
+
+    &::before {
+      width: 4px;
+      height: 40px;
+      background-color: rgb(65, 246, 215);
+      left: -16px;
+      border-radius: 0 4px 4px 0;
+      position: absolute;
+      content: '';
+    }
+  }
+}
+
+.form {
+  &__input {
+    border: 1px solid grey;
+    border-radius: 6px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding: 12px 16px;
+    width: 93%;
+    margin-bottom: 16px;
+    color: black;
+
+    &::placeholder {
+      color: grey;
+    }
+  }
+
+  &__text {
+    margin-bottom: 18px;
+  }
+
+  &__btn {
+    border-width: 0;
+    border-radius: 16px;
+    background-color: #ff3e79;
+    color: #ffffff;
+    line-height: 24px;
+    font-size: 12px;
+    letter-spacing: -0.15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 4px 8px 4px 12px;
+    display: flex;
+    // transition: 0.2s ease-in-out;
+    margin-left: auto;
+  }
+}
+
+.text {
+  font-size: 14px;
+  line-height: 16px;
+  color: grey;
+
+  &--pink {
+    color: rgb(239, 65, 129);
+  }
+}
+.popup__icon {
+  background-image: url('../img/ic_burger_close.svg');
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.visually-hidden {
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+}
+
+// Экраны шире 768px
+@media screen and (min-width: 768px) {
+  .popup {
+    &__container {
+      width: 320px;
+      padding: 24px;
+    }
+
+    &__title {
+      &::before {
+        left: -24px;
+      }
+    }
+  }
+}
+
+// Экраны шире 1440px
+@media screen and (min-width: 1440px) {
+  .popup {
+    &__container {
+      width: 440px;
+      padding: 32px;
+    }
+
+    &__icon {
+      position: absolute;
+      left: -72px;
+      top: 32px;
+    }
+
+    &__title {
+      margin-top: 4px;
+
+      &::before {
+        left: -34px;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+// Показать попап телефон
+
+.show__popup--call {
+  // display: block ;
+}
+
+// Показать попап обратная связь
+
+.show__popup--feedback {
+  // display: block;
+}
