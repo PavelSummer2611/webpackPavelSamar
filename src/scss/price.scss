@@ -128,3 +128,10 @@
   vertical-align: middle;
   max-width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .price-wrapper {
+    padding: 0 1vw;
+    display: grid;
+    box-sizing: border-box;
+  }
+}

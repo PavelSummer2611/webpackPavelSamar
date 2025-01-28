@@ -1,96 +1,107 @@
+import 'swiper/swiper.scss'
+import 'swiper/modules/pagination.scss'
 import '../scss/style.scss'
 
-// import 'swiper/swiper.scss'
-// import 'swiper/modules/pagination.scss'
+import Swiper from 'swiper'
+import { Pagination } from 'swiper/modules'
 
-// import Swiper from 'swiper'
-// import { Pagination } from 'swiper/modules'
+// if (window.innerWidth <= 768) {
+//   const swiper = new Swiper('.swiper-1', {
+//     spaceBetween: 16,
+//       width: 272,
+//     modules: [Pagination],
+//     pagination: {
+//       el: '.swiper-pagination',
+//       clickable: true
+//     },
+//     slidesPerView: 1,
+//     spaceBetween: 10,
+//   });
+// }
+
+
+
+
+
+// if (document.body.matchMedia < 768) {
+//   swiper1.init(swiper)
+//   swiper260.init(swiper)
+// }
+
+// const swiper240 = new Swiper('.swiper-1', {
+//   spaceBetween: 16,
+//   width: 272,
+
+//   modules: [Pagination],
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true
+//   },
+//   keyboard: {
+//     enabled: true,
+//     onlyInViewPort: true
+//   },
+//   on: {
+//     resize: function enableOnlyMobile(swiper) {
+//       if (768 < window.innerWidth) {
+//         swiper.disable()
+//         swiper.el.classList.add('-non-slider')
+//       } else {
+//         swiper.enable()
+//         swiper.el.classList.remove('-non-slider')
+//       }
+//     }
+//   }
+// })
+
+
+
+
+
+
+
 
 // свайпер на бренды
 
-let swiper
-
-function initSwiper() {
+let swiper1
+function initSwiper1() {
   // Проверяем, если ширина экрана меньше или равна 767px
   if (window.matchMedia('(max-width: 767px)').matches) {
     // Если Swiper еще не инициализирован, создаем его
-    if (!swiper) {
-      swiper = new Swiper('.swiper', {
-        centeredSlides: true,
+    if (!swiper1) {
+      swiper1 = new Swiper('.swiper-1', {
+        spaceBetween: 16,
+        width: 272,
+        centeredSlides: false,
         loop: false,
+        modules: [Pagination],
         pagination: {
           el: '.swiper-pagination',
           clickable: true
         },
-        slidesPerView: 1.3,
-        spaceBetween: 10,
+        // slidesPerView: 2,
+        // spaceBetween: 10,
         centerInsufficientSlides: true
       })
     }
   } else {
     // Если ширина больше 767px и Swiper был инициализирован, уничтожаем его
-    if (swiper) {
-      swiper.destroy(true, true)
-      swiper = null
+    if (swiper1) {
+      swiper1.destroy(true, true)
+      swiper1 = null
     }
   }
 }
-
 // Запускаем функцию при загрузке страницы
-initSwiper()
-
+initSwiper1()
 // Следим за изменением ширины окна и вызываем функцию
 window.addEventListener('resize', initSwiper)
 
-// кнопка показать все бренды
 
-// const items = document.querySelectorAll('.brand-list-item')
-// const toggleButton = document.querySelector('.expand__brands')
-// let displayCount = 6 // Начальное количество видимых элементов
 
-// function updateItems() {
-//   // Показать нужное количество элементов
-//   for (let i = 0; i < items.length; i++) {
-//     if (window.innerWidth >= 1120 && displayCount === 6) {
-//       displayCount = 8
-//     }
-//     if (i < displayCount) {
-//       items[i].classList.remove('hidden')
-//     } else {
-//       items[i].classList.add('hidden')
-//     }
-//   }
-//   // Обновить текст кнопки
-//   if (displayCount === 11) {
-//     toggleButton.textContent = 'Скрыть'
-//     toggleButton.classList.add('rotate')
-//   } else {
-//     toggleButton.textContent = 'Показать все'
-//     toggleButton.classList.remove('rotate')
-//   }
-// }
 
-// toggleButton.addEventListener('click', function () {
-//   // Если отображаем 6 или 8 элементов, переключаем на 11
-//   if (displayCount === 6 || displayCount === 8) {
-//     displayCount = 11
-//   } else if (
-//     // Если отображаем все 11 элементов, вернём к 6 или 8
-//     displayCount === 11 &&
-//     window.innerWidth >= 768
-//   ) {
-//     displayCount = 6
-//   } else if (displayCount === 11 && window.innerWidth >= 1120) {
-//     displayCount = 8
-//   }
 
-//   updateItems()
-// })
 
-// // Первоначальное отображение элементов
-// updateItems()
-
-console.log('Works!')
 
 // показать скрыть бренды
 
@@ -129,6 +140,7 @@ const chatButton = document.querySelector('.burger-menu__chat__button')
 
 const callMenu = document.querySelector('.popup--call')
 const callButton = document.querySelector('.burger-menu__call__button')
+
 const iconClose = document.querySelector('.icon--close')
 const substrate = document.querySelector('.substrate')
 
@@ -226,3 +238,51 @@ headerChatBtn.addEventListener('click', function () {
 })
 
 
+
+// кнопка показать все бренды
+
+// const items = document.querySelectorAll('.brand-list-item')
+// const toggleButton = document.querySelector('.expand__brands')
+// let displayCount = 6 // Начальное количество видимых элементов
+
+// function updateItems() {
+//   // Показать нужное количество элементов
+//   for (let i = 0; i < items.length; i++) {
+//     if (window.innerWidth >= 1120 && displayCount === 6) {
+//       displayCount = 8
+//     }
+//     if (i < displayCount) {
+//       items[i].classList.remove('hidden')
+//     } else {
+//       items[i].classList.add('hidden')
+//     }
+//   }
+//   // Обновить текст кнопки
+//   if (displayCount === 11) {
+//     toggleButton.textContent = 'Скрыть'
+//     toggleButton.classList.add('rotate')
+//   } else {
+//     toggleButton.textContent = 'Показать все'
+//     toggleButton.classList.remove('rotate')
+//   }
+// }
+
+// toggleButton.addEventListener('click', function () {
+//   // Если отображаем 6 или 8 элементов, переключаем на 11
+//   if (displayCount === 6 || displayCount === 8) {
+//     displayCount = 11
+//   } else if (
+//     // Если отображаем все 11 элементов, вернём к 6 или 8
+//     displayCount === 11 &&
+//     window.innerWidth >= 768
+//   ) {
+//     displayCount = 6
+//   } else if (displayCount === 11 && window.innerWidth >= 1120) {
+//     displayCount = 8
+//   }
+
+//   updateItems()
+// })
+
+// // Первоначальное отображение элементов
+// updateItems()

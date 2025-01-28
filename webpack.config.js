@@ -5,8 +5,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   
-  
-  
+  // resolve: {
+  //   extensions: ['.js', '.jsx', '.mjs'], // Добавьте поддержку .mjs файлов
+  // },
   
   // Входной файл
   entry: [
@@ -22,7 +23,10 @@ module.exports = {
   devtool: "source-map",
 
   module: {
+
     rules: [
+     
+
       // Транспилируем js с babel
       {
         test: /\.(js|mjs)$/,
@@ -34,6 +38,11 @@ module.exports = {
             presets: ['@babel/preset-env'],
           }
         }
+      },
+
+      {
+        test: /\.mjs$/,
+        type: "javascript/auto", // Позволяет обрабатывать ESM файлы
       },
 
       // Компилируем SCSS в CSS

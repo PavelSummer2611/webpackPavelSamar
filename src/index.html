@@ -205,7 +205,7 @@
 
       <h2 class="repairBrand__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2>
     
-    <div class="brand-slider swiper">
+    <div class="brand-slider swiper-1">
       <div class="brand-list swiper-wrapper">
         <div class="brand-list-item swiper-slide">
           <img class="image" src="img/lenovo.svg" alt="Леново" />
@@ -251,8 +251,9 @@
           <img class="image" src="img/apple.svg" alt="Эпл" />
           <button class="go-button"></button>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-pagination"></div>
+      <!-- <div class="swiper-pagination"></div> -->
     </div>
 
     <!-- <div class="expand"> -->
@@ -265,31 +266,27 @@
 
     <section class="techTypes hide">
 
-<h2 class="techTypes__title">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h2>
+      <h2 class="techTypes__title">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h2>
 
-<div class="techTypes_swiper">
-  <div class="swiper-wrapper techTypesList">
-  <a href="#" class="techTypesCard">Ремонт ноутбуков</a>
-  <a href="#" class="techTypesCard">Ремонт планшетов</a>
-  <a href="#" class="techTypesCard">Ремонт ПК</a>
-  <a href="#" class="techTypesCard">Ремонт мониторов</a>
-  <a href="#" class="techTypesCard">Ремонт ПК</a>
-  <a href="#" class="techTypesCard">Ремонт мониторов</a>
-  </div>
-
-  
-
-</div>
-<button class="btn-show--techTypes expand_button">Показать все</button>
+      <div class="techTypes_swiper swiper-1">
+        <div class="swiper-wrapper techTypesList">
+        <a href="#" class="techTypesCard swiper-slide">Ремонт ноутбуков</a>
+        <a href="#" class="techTypesCard swiper-slide">Ремонт планшетов</a>
+        <a href="#" class="techTypesCard swiper-slide">Ремонт ПК</a>
+        <a href="#" class="techTypesCard swiper-slide">Ремонт мониторов</a>
+        <a href="#" class="techTypesCard swiper-slide">Ремонт ПК</a>
+        <a href="#" class="techTypesCard swiper-slide">Ремонт мониторов</a>
+      </div>
+      <div class="swiper-pagination pagination2"></div>
+      </div>
+      <button class="btn-show--techTypes expand_button">Показать все</button>
 
     </section>
-
 
     <!-- цены на услуги -->
 
     <section class="price">
       <h2 class="price__title">ЦЕНЫ НА УСЛУГИ</h2>
-
 
       <div class="price__head">
         <p class="price__head-col price__head-col--services"
@@ -298,7 +295,7 @@
         <p class="price__head-col price__head-col--term">Срок</p>
       </div>
 
-      <div class="price__swiper swiper">
+      <div class="price__swiper swiper-3">
         <div class="swiper-wrapper price-wrapper">
           <div class="swiper-slide price__card">
             <div class="card__item card__item--services">
@@ -423,19 +420,19 @@
             alt=""
         /></nobr>
       </button>
-
-
     </section>
 
        <!-- футер -->
+
     <footer class="footerEnd">
       <p class="footer__item">© 2019 CPS<br> Разработано командой Apesong</p> 
       <a href="#" class="footer__item">Политика конфиденциальности</a> 
       <p>Информация, размещенная на данной странице,<br> не является публичной офертой</p> 
           </footer>
+        </div>
 
+<!-- попап call -->
 
-</div>
 <aside class="popup popup--call">
   <div class="popup__container">
     <button type="button" class="popup__icon icon icon--close visually-hidden">Закрыть меню</button>
@@ -452,6 +449,8 @@
     </div>
   </div>
 </aside>
+
+<!-- попап feedback -->
 
 <aside class="popup popup--feedback">
   <div class="popup__container">
@@ -472,9 +471,6 @@
     </div>
   </div>
 </aside>
-
-   
-
 
 </div>
 

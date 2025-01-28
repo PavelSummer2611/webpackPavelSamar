@@ -1,11 +1,13 @@
 @import 'variables.scss';
 
+@media screen and (max-width: 768px) {  
+
 .swiper {
   margin-top: 16px;
   padding: 0 16px 44px;
 
   &-slide {
-    padding: 16px;
+    // padding: 16px;
     border: 1px solid $border-gray-color;
     border-radius: 6px;
     background-color: $white-color;
@@ -17,7 +19,8 @@
   }
 
   &-pagination {
-    margin-bottom: 8px;
+    margin-bottom: -28px;
+    // position: sticky;
 
     &-bullet {
       height: 12px;
@@ -29,4 +32,5 @@
       }
     }
   }
+}
 }

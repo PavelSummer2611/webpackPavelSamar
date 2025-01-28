@@ -10,3 +10,11 @@
   text-decoration: none;
   color: grey;
 }
+@media screen and (max-width: 767px) {
+  .footerEnd {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+}
