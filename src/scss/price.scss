@@ -9,6 +9,7 @@
   padding: 1vw 2vw;
   background-image: linear-gradient(to right, #f8f8f8, #ffffff);
 }
+
 .price__head {
   display: flex;
   justify-content: space-between;
@@ -21,27 +22,33 @@
   margin: 0 24px;
   padding: 0 16px;
 }
+
 .price__head-col--services {
   flex-basis: 348px;
   flex-grow: 1;
 }
+
 .price__head-col--price {
   flex-basis: 74px;
   flex-grow: 1;
 }
+
 .price__head-col--term {
   flex-basis: 220px;
   flex-grow: 1;
 }
+
 .price__swiper {
   height: auto;
   margin: 0 2vw 2vw;
   padding: 0;
   background-color: white;
 }
+
 .price-wrapper {
   padding: 0 1vw;
 }
+
 .price__card {
   font-family: 'TT Lakes Regular';
   font-size: 14px;
@@ -61,17 +68,21 @@
   box-sizing: content-box;
   // transition: 0.2s linear;
 }
+
 .price__card:hover {
   font-weight: 500;
 }
+
 .card__item--services {
   flex-basis: 348px;
   flex-grow: 1;
 }
+
 .card__item--price {
   flex-basis: 74px;
   flex-grow: 1;
 }
+
 .card__item--term {
   flex-basis: 220px;
   flex-grow: 1;
@@ -80,6 +91,7 @@
   justify-content: space-between;
   white-space: nowrap;
 }
+
 .card__btn {
   border-width: 0;
   border-radius: 16px;
@@ -95,6 +107,7 @@
   // transition: 0.2s ease-in-out;
   margin-left: auto;
 }
+
 .card__btn::after {
   content: '';
   background: url(../img/goside.svg);
@@ -102,6 +115,7 @@
   width: 24px;
   height: 24px;
 }
+
 .price__text {
   font-family: 'TT Lakes Regular';
   font-size: 14px;
@@ -110,6 +124,7 @@
   width: 420px;
   margin: 0 2vw 1vw;
 }
+
 .price__btn {
   margin: 0 2vw 1vw;
   appearance: none;
@@ -122,12 +137,14 @@
   color: inherit;
   cursor: pointer;
 }
+
 .price__btn-arrow {
   padding: 18px 18px;
   display: inline;
   vertical-align: middle;
   max-width: 100%;
 }
+
 @media screen and (min-width: 768px) {
   .price-wrapper {
     padding: 0 1vw;

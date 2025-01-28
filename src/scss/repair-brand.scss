@@ -16,6 +16,7 @@
 .repairBrand {
   margin-bottom: 2vw;
 }
+
 .repairBrand__title {
   font-family: 'TT Lakes Medium';
   color: rgb(126, 126, 130);
@@ -27,12 +28,14 @@
   padding: 1vw 2vw;
   background-image: linear-gradient(to right, #f8f8f8, #ffffff);
 }
+
 .brand-slider {
   padding: 0 2vw;
   overflow: hidden;
   margin-bottom: 1vh;
   height: 185px;
 }
+
 .brand-list {
   padding: 0;
   margin: 1vh 0 1vh 0;
@@ -41,6 +44,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .brand-list-item {
   background-color: #ffffff;
   // margin: 20px 13px 20px 13px;
@@ -56,6 +60,7 @@
   height: 72px;
   align-items: center;
 }
+
 .go-button {
   border-style: none;
   width: 40px;
@@ -65,10 +70,12 @@
   text-align: center;
   margin: 10px;
 }
+
 .image {
   margin: 16px;
   background-color: inherit;
 }
+
 // .expand {
 //   // margin-top: 20px;
 //   // margin-left: 40px;
@@ -87,6 +94,7 @@
   cursor: grab;
   position: relative;
 }
+
 .expand_button::before {
   content: url('../img/ic_expand.svg');
   top: -2px;
@@ -94,6 +102,7 @@
   position: absolute;
   transition: transform 0.3s ease;
 }
+
 .expand_button.rotate::before {
   transform: translateY(-5px) rotate(180deg);
 }
@@ -115,6 +124,7 @@
     overflow-x: hidden;
     height: auto;
   }
+
   .brand-list {
     margin-bottom: 20px;
     padding: 10px;
@@ -122,6 +132,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
   }
+
   .brand-list-item {
     background-color: #ffffff;
     margin: 1px;
@@ -161,6 +172,7 @@
     gap: 16px 24px;
   }
 }
+
 .brand-slider.show {
   height: auto;
   overflow: visible;

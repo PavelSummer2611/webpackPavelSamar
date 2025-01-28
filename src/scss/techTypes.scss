@@ -1,6 +1,7 @@
 .techTypes {
   margin-bottom: 2vw;
 }
+
 .techTypes__title {
   font-family: 'TT Lakes Medium';
   color: rgb(126, 126, 130);
@@ -12,6 +13,7 @@
   padding: 1vw 2vw;
   background-image: linear-gradient(to right, #f8f8f8, #ffffff);
 }
+
 .techTypesList {
   display: flex;
   // display: grid;
@@ -19,6 +21,7 @@
   column-gap: 32px;
   gap: 16px 24px;
 }
+
 .techTypes_swiper {
   width: auto;
   overflow: hidden;
@@ -26,6 +29,7 @@
   margin: 2vw 0;
   padding: 0 2vw;
 }
+
 .techTypesCard {
   width: 240px;
   font-family: 'TT Lakes Regular';
@@ -44,6 +48,7 @@
   border-radius: 6px;
   background-color: #ffffff;
 }
+
 .techTypesCard::after {
   content: '';
   background: url(../img/go.svg) no-repeat;
@@ -53,6 +58,7 @@
 }
 
 @media screen and (min-width: 768px) {
+
   .techTypesList {
     display: grid;
     grid-template-columns: repeat(3, minmax(240px, 1fr));
@@ -61,6 +67,7 @@
 }
 
 @media screen and (min-width: 1440px) {
+
   .techTypesList {
     display: grid;
     grid-template-columns: repeat(4, minmax(240px, 1fr));
@@ -68,7 +75,9 @@
     gap: 16px 24px;
   }
 }
+
 @media screen and (max-width: 767px) {
+  
   .pagination2 {
     margin-bottom: -70px !important;
   }
@@ -76,8 +85,8 @@
     display: none;
   }
 }
-// класс на показать все
 
+// класс на показать все
 .techTypes_swiper.show {
   height: auto;
   overflow: visible;

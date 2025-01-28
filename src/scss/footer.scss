@@ -6,10 +6,12 @@
   padding: 0 32px;
   color: grey;
 }
+
 .footer__item {
   text-decoration: none;
   color: grey;
 }
+
 @media screen and (max-width: 767px) {
   .footerEnd {
     display: flex;

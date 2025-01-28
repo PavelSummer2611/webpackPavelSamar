@@ -19,10 +19,6 @@ import { Pagination } from 'swiper/modules'
 //   });
 // }
 
-
-
-
-
 // if (document.body.matchMedia < 768) {
 //   swiper1.init(swiper)
 //   swiper260.init(swiper)
@@ -53,13 +49,6 @@ import { Pagination } from 'swiper/modules'
 //     }
 //   }
 // })
-
-
-
-
-
-
-
 
 // свайпер на бренды
 
@@ -96,12 +85,6 @@ function initSwiper1() {
 initSwiper1()
 // Следим за изменением ширины окна и вызываем функцию
 window.addEventListener('resize', initSwiper)
-
-
-
-
-
-
 
 // показать скрыть бренды
 
@@ -236,8 +219,6 @@ headerChatBtn.addEventListener('click', function () {
 
   closePopup(chatMenu)
 })
-
-
 
 // кнопка показать все бренды
 
