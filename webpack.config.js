@@ -25,7 +25,7 @@ module.exports = {
     rules: [
       // Транспилируем js с babel
       {
-        test: /\.js$/,
+        test: /\.(js|mjs)$/,
         include: path.resolve(__dirname, 'src/js'),
         exclude: /node_modules/,
         use: {

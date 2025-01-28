@@ -149,12 +149,12 @@
 
 // Показать попап телефон
 
-.show__popup--call {
-  // display: block ;
+.popup--call.show__popup--call {
+  display: block ;
 }
 
 // Показать попап обратная связь
 
-.show__popup--feedback {
-  // display: block;
+.popup--feedback.show__popup--feedback {
+  display: block;
 }

@@ -14,6 +14,7 @@
     
     <div class="main-container">
 
+      <div class="substrate"></div>
 <!-- левое меню -->
 
     <aside class="burger-menu">
@@ -21,7 +22,7 @@
         <header class="burger-menu__header">
           <div class="burger-menu__header-left">
             <div class="burger-close">
-              <button class="burger-close__button button"></button>
+              <button class="burger-close__button button icon--close"></button>
             </div>
             <div class="burger-menu__logo">
               <img src="img/Group.svg" alt="лого" />
@@ -63,21 +64,10 @@
             </ul>
           </div>
           <footer class="burger-menu__footer">
-            <!-- <div class="burgerMenu__footer__btns">
-              <a href="#" class="footer__call"></a>
-              <a href="#" class="footer__chat"></a>
-              <a href="#" class="footer__profile"></a>
-            </div> -->
             <div class="burger-menu__footer__buttons">
-              <!-- <div class="footer__call"> -->
                 <button class="burger-menu__call__button button"></button>
-              <!-- </div> -->
-              <!-- <div class="footer__chat"> -->
                 <button class="burger-menu__chat__button button"></button>
-              <!-- </div> -->
-              <!-- <div class="footer__profile"> -->
                 <button class="burger-menu__profile__button button"></button>
-              <!-- </div> -->
             </div>
             <a href="mailto:mail@cps.com" class="mail">mail@cps.com</a>
             <a href="tel:+78008908900" class="phone">8 800 890 8900</a>
@@ -241,23 +231,23 @@
           <img class="image" src="img/hp.svg" alt="Эйчпи" />
           <button class="go-button"></button>
         </div>
-        <div class="swiper-slide brand-list-item hidden">
+        <div class="swiper-slide brand-list-item">
           <img class="image" src="img/acer.svg" alt="Асер" />
           <button class="go-button"></button>
         </div>
-        <div class="swiper-slide brand-list-item hidden">
+        <div class="swiper-slide brand-list-item">
           <img class="image" src="img/sony.svg" alt="Сони" />
           <button class="go-button"></button>
         </div>
-        <div class="swiper-slide brand-list-item hidden">
+        <div class="swiper-slide brand-list-item">
           <img class="image" src="img/lenovo.svg" alt="Леново" />
           <button class="go-button"></button>
         </div>
-        <div class="swiper-slide brand-list-item hidden">
+        <div class="swiper-slide brand-list-item">
           <img class="image" src="img/samsung.svg" alt="Самсунг" />
           <button class="go-button"></button>
         </div>
-        <div class="swiper-slide brand-list-item hidden">
+        <div class="swiper-slide brand-list-item">
           <img class="image" src="img/apple.svg" alt="Эпл" />
           <button class="go-button"></button>
         </div>
@@ -266,14 +256,14 @@
     </div>
 
     <!-- <div class="expand"> -->
-      <button class="expand expand_button">Показать все</button>
+      <button class="expand__brands expand_button">Показать все</button>
     <!-- </div> -->
 
   </section>
 
 <!-- ремонт техники -->
 
-    <section class="techTypes">
+    <section class="techTypes hide">
 
 <h2 class="techTypes__title">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h2>
 
@@ -283,12 +273,14 @@
   <a href="#" class="techTypesCard">Ремонт планшетов</a>
   <a href="#" class="techTypesCard">Ремонт ПК</a>
   <a href="#" class="techTypesCard">Ремонт мониторов</a>
+  <a href="#" class="techTypesCard">Ремонт ПК</a>
+  <a href="#" class="techTypesCard">Ремонт мониторов</a>
   </div>
 
   
 
 </div>
-<button class="expand_button">Показать все</button>
+<button class="btn-show--techTypes expand_button">Показать все</button>
 
     </section>
 
@@ -444,9 +436,9 @@
 
 
 </div>
-<aside class="popup popup--call show__popup--call">
+<aside class="popup popup--call">
   <div class="popup__container">
-    <button type="button" class="popup__icon icon icon--close visually-hidden close">Закрыть меню</button>
+    <button type="button" class="popup__icon icon icon--close visually-hidden">Закрыть меню</button>
     <div class="popup__content">
       <h2 class="popup__title">Заказать звонок</h2>
       <form class="popup__form form" action="#" method="get">
@@ -461,9 +453,9 @@
   </div>
 </aside>
 
-<aside class="popup popup--feedback show__popup--feedback">
+<aside class="popup popup--feedback">
   <div class="popup__container">
-    <button type="button" class="popup__icon icon icon--close visually-hidden close">Закрыть меню</button>
+    <button type="button" class="popup__icon icon icon--close visually-hidden">Закрыть меню</button>
     <div class="popup__content feedback">
       <h2 class="popup__title">Обратная связь</h2>
       <form class="popup__form form" action="#" method="get">

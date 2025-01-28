@@ -101,7 +101,7 @@
   // width: 100%;
   display: flex;
   align-items: center;
-  padding: 1vw 2vw 0 2vw;
+  padding: 0 2vw 0 2vw;
 }
 .main-header__h1 {
   color: rgb(27, 28, 33);
@@ -296,7 +296,7 @@ label {
     display: none;
   }
 }
-@media (min-width: 1120px) {
+@media (min-width: 1440px) {
   .main {
     // width: 1120px;
     margin-left: auto;

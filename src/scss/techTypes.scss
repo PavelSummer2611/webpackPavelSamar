@@ -16,8 +16,12 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(240px, 1fr));
   column-gap: 32px;
+  gap: 16px 24px;
 }
 .techTypes_swiper {
+  width: auto;
+  overflow: hidden;
+  height: 200px;
   margin: 2vw 0;
   padding: 0 2vw;
 }
@@ -44,4 +48,29 @@
   width: 40px;
   height: 40px;
   align-self: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+  .techTypesList {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    column-gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .techTypesList {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(240px, 1fr));
+    column-gap: 32px;
+    gap: 16px 24px;
+  }
+}
+
+// класс на показать все
+
+.techTypes_swiper.show {
+  height: auto;
+  overflow: visible;
+  margin-bottom: 46px;
 }
