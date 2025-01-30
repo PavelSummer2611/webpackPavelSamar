@@ -5,86 +5,74 @@ import '../scss/style.scss'
 import Swiper from 'swiper'
 import { Pagination } from 'swiper/modules'
 
-// if (window.innerWidth <= 768) {
-//   const swiper = new Swiper('.swiper-1', {
-//     spaceBetween: 16,
-//       width: 272,
-//     modules: [Pagination],
-//     pagination: {
-//       el: '.swiper-pagination',
-//       clickable: true
-//     },
-//     slidesPerView: 1,
-//     spaceBetween: 10,
-//   });
-// }
+document.addEventListener('DOMContentLoaded', function () {
+  let swiperInstances = [] // Массив для хранения всех Swiper-экземпляров
 
-// if (document.body.matchMedia < 768) {
-//   swiper1.init(swiper)
-//   swiper260.init(swiper)
-// }
+  function initSwipers() {
+    const screenWidth = window.innerWidth
+    const swiperElements = document.querySelectorAll('.swiper')
 
-// const swiper240 = new Swiper('.swiper-1', {
-//   spaceBetween: 16,
-//   width: 272,
+    if (screenWidth <= 768) {
+      swiperElements.forEach((swiperEl, index) => {
+        if (!swiperInstances[index]) {
+          swiperInstances[index] = new Swiper(swiperEl, {
+            spaceBetween: 16,
+            width: 272,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            modules: [Pagination],
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            }
+          })
+        }
+      })
+    } else {
+      swiperInstances.forEach((swiper, index) => {
+        if (swiper) {
+          swiper.destroy(true, true)
+          swiperInstances[index] = null
 
-//   modules: [Pagination],
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true
-//   },
-//   keyboard: {
-//     enabled: true,
-//     onlyInViewPort: true
-//   },
-//   on: {
-//     resize: function enableOnlyMobile(swiper) {
-//       if (768 < window.innerWidth) {
-//         swiper.disable()
-//         swiper.el.classList.add('-non-slider')
-//       } else {
-//         swiper.enable()
-//         swiper.el.classList.remove('-non-slider')
-//       }
-//     }
-//   }
-// })
-
-// свайпер на бренды
-
-let swiper1
-function initSwiper1() {
-  // Проверяем, если ширина экрана меньше или равна 767px
-  if (window.matchMedia('(max-width: 767px)').matches) {
-    // Если Swiper еще не инициализирован, создаем его
-    if (!swiper1) {
-      swiper1 = new Swiper('.swiper-1', {
-        spaceBetween: 16,
-        width: 272,
-        centeredSlides: false,
-        loop: false,
-        modules: [Pagination],
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
-        // slidesPerView: 2,
-        // spaceBetween: 10,
-        centerInsufficientSlides: true
+          // Удаляем классы Swiper, чтобы он не оставался активным
+          swiperElements[index].classList.remove(
+            'swiper-initialized',
+            'swiper-container'
+          )
+        }
       })
     }
-  } else {
-    // Если ширина больше 767px и Swiper был инициализирован, уничтожаем его
-    if (swiper1) {
-      swiper1.destroy(true, true)
-      swiper1 = null
-    }
   }
-}
-// Запускаем функцию при загрузке страницы
-initSwiper1()
-// Следим за изменением ширины окна и вызываем функцию
-window.addEventListener('resize', initSwiper)
+
+  // Инициализация при загрузке
+  initSwipers()
+
+  // Обработчик изменения размера экрана
+  window.addEventListener('resize', () => {
+    setTimeout(initSwipers, 100)
+  })
+})
+
+// показать скрыть текст
+
+const textPad = document.querySelector('.content-text__text--pad')
+const textComputer = document.querySelector('.content__text--computer')
+const textExpand = document.querySelector('.text-expand')
+
+textExpand.addEventListener('click', function () {
+  if (
+    textPad.classList.contains('show_text') &&
+    textComputer.classList.contains('show_text')
+  ) {
+    textPad.classList.remove('show_text')
+    textComputer.classList.remove('show_text')
+    textExpand.innerText = 'Читать далее'
+  } else {
+    textPad.classList.add('show_text')
+    textComputer.classList.add('show_text')
+    textExpand.innerText = 'Скрыть'
+  }
+})
 
 // показать скрыть бренды
 
@@ -219,51 +207,3 @@ headerChatBtn.addEventListener('click', function () {
 
   closePopup(chatMenu)
 })
-
-// кнопка показать все бренды
-
-// const items = document.querySelectorAll('.brand-list-item')
-// const toggleButton = document.querySelector('.expand__brands')
-// let displayCount = 6 // Начальное количество видимых элементов
-
-// function updateItems() {
-//   // Показать нужное количество элементов
-//   for (let i = 0; i < items.length; i++) {
-//     if (window.innerWidth >= 1120 && displayCount === 6) {
-//       displayCount = 8
-//     }
-//     if (i < displayCount) {
-//       items[i].classList.remove('hidden')
-//     } else {
-//       items[i].classList.add('hidden')
-//     }
-//   }
-//   // Обновить текст кнопки
-//   if (displayCount === 11) {
-//     toggleButton.textContent = 'Скрыть'
-//     toggleButton.classList.add('rotate')
-//   } else {
-//     toggleButton.textContent = 'Показать все'
-//     toggleButton.classList.remove('rotate')
-//   }
-// }
-
-// toggleButton.addEventListener('click', function () {
-//   // Если отображаем 6 или 8 элементов, переключаем на 11
-//   if (displayCount === 6 || displayCount === 8) {
-//     displayCount = 11
-//   } else if (
-//     // Если отображаем все 11 элементов, вернём к 6 или 8
-//     displayCount === 11 &&
-//     window.innerWidth >= 768
-//   ) {
-//     displayCount = 6
-//   } else if (displayCount === 11 && window.innerWidth >= 1120) {
-//     displayCount = 8
-//   }
-
-//   updateItems()
-// })
-
-// // Первоначальное отображение элементов
-// updateItems()

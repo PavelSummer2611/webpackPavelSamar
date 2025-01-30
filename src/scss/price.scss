@@ -1,102 +1,71 @@
-.price__title {
-  font-family: 'TT Lakes Medium';
-  color: rgb(126, 126, 130);
-  font-size: 16px;
-  letter-spacing: -0.6px;
-  margin: 0;
-  // width: 100%;
-  border-top: 3px solid #d9fff5;
-  padding: 1vw 2vw;
-  background-image: linear-gradient(to right, #f8f8f8, #ffffff);
-}
+.price {
+  &__title {
+    font-family: 'TT Lakes Medium';
+    color: $font-color-gray;
+    font-size: 16px;
+    letter-spacing: -0.6px;
+    margin: 0;
+    border-top: 3px solid $light-lagoon-color;
+    padding: 1vw 2vw;
+    background-image: linear-gradient(
+      to right,
+      $light-gray-color,
+      $white-color
+    );
+  }
 
-.price__head {
-  display: flex;
-  justify-content: space-between;
-  gap: 22px;
-  font-size: 14px;
-  line-height: 16px;
-  color: #7e7e82;
-  align-items: center;
-  height: 48px;
-  margin: 0 24px;
-  padding: 0 16px;
-}
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $font-color-gray;
+    align-items: center;
+    height: 48px;
+    margin: 0 24px;
+    padding: 0 16px;
+  }
 
-.price__head-col--services {
-  flex-basis: 348px;
-  flex-grow: 1;
-}
+  &__swiper {
+    height: auto;
+    margin: 0 2vw 2vw;
+    padding: 0;
+    background-color: $white-color;
+  }
 
-.price__head-col--price {
-  flex-basis: 74px;
-  flex-grow: 1;
-}
-
-.price__head-col--term {
-  flex-basis: 220px;
-  flex-grow: 1;
-}
-
-.price__swiper {
-  height: auto;
-  margin: 0 2vw 2vw;
-  padding: 0;
-  background-color: white;
+  &__card {
+    font-family: 'TT Lakes Regular';
+    font-size: 14px;
+    line-height: 0;
+    color: $font-color-black;
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    align-items: center;
+    height: 64px;
+    border: none;
+    border-radius: 0px;
+    background-color: $white-color;
+    padding: 0;
+    border-bottom: 1px solid $border-gray-color;
+    box-sizing: content-box;
+  }
 }
 
 .price-wrapper {
   padding: 0 1vw;
 }
 
-.price__card {
-  font-family: 'TT Lakes Regular';
-  font-size: 14px;
-  line-height: 0;
-  color: #1b1c21;
-  display: flex;
-  flex-direction: row;
-  gap: 22px;
-  align-items: center;
-  width: 100% !important;
-  height: 64px;
-  border: none;
-  border-radius: 0px;
-  background-color: white;
-  padding: 0;
-  border-bottom: 1px solid #eaeaea;
-  box-sizing: content-box;
-  // transition: 0.2s linear;
-}
-
-.price__card:hover {
+.price .price__card:hover {
   font-weight: 500;
-}
-
-.card__item--services {
-  flex-basis: 348px;
-  flex-grow: 1;
-}
-
-.card__item--price {
-  flex-basis: 74px;
-  flex-grow: 1;
-}
-
-.card__item--term {
-  flex-basis: 220px;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  white-space: nowrap;
 }
 
 .card__btn {
   border-width: 0;
   border-radius: 16px;
-  background-color: #ff3e79;
-  color: #ffffff;
+  background-color: $pink-color;
+  color: $white-color;
   line-height: 24px;
   font-size: 12px;
   letter-spacing: -0.15px;
@@ -104,7 +73,6 @@
   text-transform: uppercase;
   padding: 4px 8px 4px 12px;
   display: flex;
-  // transition: 0.2s ease-in-out;
   margin-left: auto;
 }
 
@@ -150,5 +118,81 @@
     padding: 0 1vw;
     display: grid;
     box-sizing: border-box;
+  }
+
+  .card__title {
+    display: none;
+  }
+  .price__head-col--services {
+    flex-basis: 348px;
+    flex-grow: 1;
+  }
+
+  .price__head-col--price {
+    flex-basis: 74px;
+    flex-grow: 1;
+  }
+
+  .price__head-col--term {
+    flex-basis: 220px;
+    flex-grow: 1;
+  }
+  .card__item--services {
+    flex-basis: 348px;
+    flex-grow: 1;
+  }
+
+  .card__item--price {
+    flex-basis: 74px;
+    flex-grow: 1;
+  }
+
+  .card__item--term {
+    flex-basis: 220px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .price__card {
+    height: 180px;
+    width: 270px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    padding: 10px;
+    gap: 0;
+    border: 1px solid $border-gray-color;
+    justify-content: space-between;
+  }
+
+  .price-wrapper {
+    display: flex;
+    padding: 0;
+  }
+
+  .card__title {
+    display: block;
+    color: $gray-color
+  }
+
+  .price__head {
+    display: none;
+  }
+  .card__item--term {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .price__swiper {
+    background-color: transparent;
+    margin: 0;
+  }
+  .card__item--services {
+    line-height: 12px;
   }
 }

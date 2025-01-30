@@ -4,20 +4,17 @@
 
 .techTypes__title {
   font-family: 'TT Lakes Medium';
-  color: rgb(126, 126, 130);
+  color: $font-color-gray;
   font-size: 16px;
   letter-spacing: -0.6px;
   margin: 0;
-  // width: 100%;
-  border-top: 3px solid #d9fff5;
+  border-top: 3px solid $light-lagoon-color;
   padding: 1vw 2vw;
-  background-image: linear-gradient(to right, #f8f8f8, #ffffff);
+  background-image: linear-gradient(to right, $light-gray-color, $white-color);
 }
 
 .techTypesList {
   display: flex;
-  // display: grid;
-  // grid-template-columns: repeat(4, minmax(240px, 1fr));
   column-gap: 32px;
   gap: 16px 24px;
 }
@@ -25,15 +22,14 @@
 .techTypes_swiper {
   width: auto;
   overflow: hidden;
-  height: 200px;
+  height: 160px;
   margin: 2vw 0;
   padding: 0 2vw;
 }
 
 .techTypesCard {
-  width: 240px;
   font-family: 'TT Lakes Regular';
-  color: rgb(27, 28, 33);
+  color: $font-color-black;
   font-size: 16px;
   text-decoration: none;
   display: flex;
@@ -44,9 +40,9 @@
   line-height: 24px;
   justify-content: space-between;
   padding: 16px;
-  border: 1px solid #eaeaea;
+  border: 1px solid $border-gray-color;
   border-radius: 6px;
-  background-color: #ffffff;
+  background-color: $white-color;
 }
 
 .techTypesCard::after {
@@ -58,16 +54,17 @@
 }
 
 @media screen and (min-width: 768px) {
-
   .techTypesList {
     display: grid;
     grid-template-columns: repeat(3, minmax(240px, 1fr));
     column-gap: 32px;
   }
+  .swiper-pagination {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-
   .techTypesList {
     display: grid;
     grid-template-columns: repeat(4, minmax(240px, 1fr));
@@ -77,10 +74,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  
-  .pagination2 {
-    margin-bottom: -70px !important;
-  }
   .btn-show--techTypes {
     display: none;
   }

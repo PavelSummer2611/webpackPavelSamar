@@ -1,36 +1,39 @@
 @import 'variables.scss';
 
-@media screen and (max-width: 768px) {  
+.swiper-slide{
+ box-sizing: border-box;
+}
 
-.swiper {
-  margin-top: 16px;
-  padding: 0 16px 44px;
+@media screen and (max-width: 768px) {
+  .swiper {
+    margin-top: 16px;
+    padding: 0 16px 44px;
 
-  &-slide {
-    // padding: 16px;
-    border: 1px solid $border-gray-color;
-    border-radius: 6px;
-    background-color: $white-color;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-    box-sizing: border-box;
-  }
+    // &-slide {
+    //   // padding: 16px;
+    //   border: 1px solid $border-gray-color;
+    //   border-radius: 6px;
+    //   background-color: $white-color;
+    //   display: flex;
+    //   justify-content: space-between;
+    //   align-items: center;
+    //   flex-shrink: 0;
+    //   box-sizing: border-box;
+    // }
 
-  &-pagination {
-    margin-bottom: -28px;
-    // position: sticky;
+    &-pagination {
+      // margin-bottom: 28px;
+      position: absolute;
 
-    &-bullet {
-      height: 12px;
-      width: 12px;
-      background-color: #dddddd;
+      &-bullet {
+        height: 12px;
+        width: 12px;
+        background-color: #dddddd;
 
-      &-active {
-        background-color: #b5b6bc;
+        &-active {
+          background-color: #b5b6bc;
+        }
       }
     }
   }
-}
 }

@@ -4,12 +4,12 @@
   justify-content: space-between;
   margin: 0 0 25px;
   padding: 0 32px;
-  color: grey;
+  color: $font-color-gray;
 }
 
 .footer__item {
   text-decoration: none;
-  color: grey;
+  color: $font-color-gray;
 }
 
 @media screen and (max-width: 767px) {

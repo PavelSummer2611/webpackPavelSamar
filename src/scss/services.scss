@@ -1,5 +1,5 @@
 .main-content {
-  background-color: #f8f8f8;
+  background-color: $light-gray-color;
 }
 
 .header {
@@ -8,24 +8,24 @@
   height: 88px;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: $white-color;
   background-size: cover;
 }
 
 .left-header {
   display: flex;
-  background-color: white;
+  background-color: $white-color;
   align-items: center;
 }
 
 .right-header {
   display: flex;
-  background-color: white;
+  background-color: $white-color;
 }
 
 .header::before {
   content: '';
-  background: rgb(234, 234, 234);
+  background: $gray-color;
   left: 59vw;
   top: 28px;
   bottom: 28px;
@@ -38,7 +38,7 @@
 
 .header::after {
   content: '';
-  background: #d9fff5;
+  background: $light-lagoon-color;
   left: 0;
   right: 0;
   top: 87px;
@@ -53,7 +53,7 @@
   border-style: none;
   width: 40px;
   height: 40px;
-  background-color: white;
+  background-color: $white-color;
 }
 
 .burger,
@@ -63,7 +63,7 @@
 .profile,
 .repair,
 .checkstatus {
-  background-color: white;
+  background-color: $white-color;
 }
 
 .burger__button {
@@ -104,18 +104,14 @@
   margin-right: 3vw;
 }
 
-// .main {
-
-// }
 .main-header {
-  // width: 100%;
   display: flex;
   align-items: center;
   padding: 0 2vw 0 2vw;
 }
 
 .main-header__h1 {
-  color: rgb(27, 28, 33);
+  color: $font-color-black;
   font-family: 'TT Lakes Bold';
   font-size: 2em;
   font-weight: bold;
@@ -136,7 +132,6 @@ label {
 
 .nav {
   position: relative;
-  // width: 100%;
   padding: 0 2vw 0 2vw;
   overflow: hidden;
 }
@@ -154,19 +149,18 @@ label {
   white-space: nowrap;
   min-height: 40px;
   position: relative;
-  // width: 100%;
   padding-left: 0;
 }
 
 .slide-menu__button {
   list-style: none;
-  background-color: #f8f8f8;
+  background-color: $light-gray-color;
   padding: 0.7rem;
 }
 
 .slide-menu__button > a {
   padding: 5px;
-  color: rgb(126, 126, 130);
+  color: $font-color-gray;
   font-family: 'TT Lakes Medium';
   font-weight: 500;
   font-size: 1rem;
@@ -176,39 +170,32 @@ label {
 
 .slide-menu__button:hover {
   border-style: solid;
-  border-color: #b8ffec;
-  background-color: white;
+  border-color: $lagoon-color;
+  background-color: $white-color;
   border-width: 2px;
   border-radius: 5px;
   transition-duration: 0.2;
 }
 
 .slide-menu__button--active > a {
-  background-color: white;
+  background-color: $white-color;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  // width: 100%;
   padding: 0 2vw 3vw 2vw;
 }
 
-.content__text {
-  color: rgb(27, 28, 33);
+.content-text {
+  color: $font-color-black;
   font-family: 'TT Lakes Rgular';
   font-size: 1rem;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0.2px;
-  margin-left: 1em;
-}
 
-.content-text {
-  // position: relative;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: flex-start;
+  padding-bottom: 10px;
 }
 
 .content-text__text {
@@ -233,7 +220,7 @@ label {
 .main-header__label {
   min-width: 140px;
   font-family: 'TT Lakes Medium';
-  color: #1b1c21;
+  color: $font-color-black;
   font-weight: 500;
   font-size: 1rem;
   cursor: default;
@@ -253,27 +240,10 @@ label {
 .main-header__checkstatus-button {
   background-image: url('../img/ic_checkstatus.svg');
   background-repeat: no-repeat;
-  // margin-right: 2vw;
   align-self: flex-end;
   display: none;
 }
 
-// .expand__button::before {
-//   content: url('../img/ic_expand.svg');
-//   position: absolute;
-//   left: 4vw;
-//   top: -2px;
-// }
-// .expand__button {
-//   position: relative;
-//   font-family: 'TT Lakes Medium';
-//   font-weight: 500;
-//   padding: 0 0 5vw 8vw;
-//   font-size: 1rem;
-//   background-color: #f8f8f8;
-//   border-style: none;
-//   padding-left: 10vw;
-// }
 @media (min-width: 768px) {
   .header::before {
     left: calc(40px + 6vw);
@@ -281,7 +251,7 @@ label {
 
   .repair__button::before {
     content: '';
-    background: #eaeaea;
+    background: $border-gray-color;
     right: 6.5vw;
     top: 5px;
     width: 2px;
@@ -306,7 +276,6 @@ label {
   }
 
   .nav {
-    // width: 100%;
     padding: 0 2vw 0 2vw;
   }
 
@@ -330,7 +299,6 @@ label {
     object-fit: cover;
     width: 360px;
     height: 208px;
-    // margin-right: 3vw;
     border-radius: 3%;
   }
 
@@ -341,7 +309,6 @@ label {
 
 @media (min-width: 1440px) {
   .main {
-    // width: 1120px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -354,12 +321,10 @@ label {
     object-fit: cover;
     width: 532px;
     height: 307px;
-    // padding-right: 1vw;
     border-radius: 3%;
   }
 
   .nav {
-    // width: 1096px;
     padding: 0 2vw 0 2vw;
   }
 
@@ -376,10 +341,19 @@ label {
   .expand__button {
     padding-left: 7vw;
   }
-  
+
   label,
   .main-header__repair-button,
   .main-header__checkstatus-button {
     display: block;
   }
+}
+
+//  показать скрыть текст
+
+.content-text__text--pad.show_text {
+  display: inline;
+}
+.content__text--computer.show_text {
+  display: inline;
 }
